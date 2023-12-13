@@ -4,3 +4,8 @@ hello-enum
 trait
 hello-ownership
 hello-pattern
+.swp
+mymacro
+nostd
+vec-macro
+vec-new

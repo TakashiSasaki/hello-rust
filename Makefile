@@ -1,4 +1,4 @@
-all: hello hello-ownership hello-pattern hello-enum trait generics
+all: hello hello-ownership hello-pattern hello-enum trait generics vec-macro vec-new mymacro future nostd
 
 hello: hello.rs
 	rustc $<
@@ -17,3 +17,19 @@ trait: trait.rs
 
 generics: generics.rs
 	rustc $<
+
+vec-macro: vec-macro.rs
+	rustc $<
+
+vec-new: vec-new.rs
+	rustc $<
+
+mymacro: mymacro.rs
+	rustc $<
+
+future: future.rs
+	rustc $<
+
+nostd: nostd.rs 
+	rustc -C panic=abort -C link-args="-e _start -static -nostartfiles" $<
+
